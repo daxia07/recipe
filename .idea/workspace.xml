@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="" />
+    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/recipe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/recipe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,13 +26,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1QilMzhq8x1vX5W8lECZhbJjIGS" />
   <component name="PropertiesComponent">
+    <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.7.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="tasks" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -35,22 +63,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.first.js (1)">
-    <configuration type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$/../recipe">
+  <component name="RunManager" selected="Node.js.Babel-Node">
+    <configuration name="Babel-Node" type="NodeJSConfigurationType" node-parameters="-r @babel/register" path-to-js-file="src/js/index.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="NODE_ENV" value="development" />
+        <env name="DEBUG" value="App" />
+      </envs>
       <method v="2" />
     </configuration>
-    <configuration name="first.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/../recipe/first.js" working-dir="$PROJECT_DIR$/../recipe">
+    <configuration name="ES6-Node" type="NodeJSConfigurationType" path-to-node="$PROJECT_DIR$/node_modules/.bin/babel-node" path-to-js-file="src/js/index.js" working-dir="$PROJECT_DIR$">
+      <envs>
+        <env name="NODE_ENV" value="development" />
+        <env name="DEBUG" value="App" />
+      </envs>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Node.js.first.js" />
-      <item itemvalue="Node.js.first.js (1)" />
+      <item itemvalue="Node.js.ES6-Node" />
+      <item itemvalue="Node.js.Babel-Node" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Node.js.first.js (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -64,19 +95,41 @@
       <updated>1568261253711</updated>
       <workItem from="1568261255771" duration="1622000" />
       <workItem from="1568263477453" duration="1399000" />
+      <workItem from="1568272290482" duration="49000" />
+      <workItem from="1568272350496" duration="37000" />
+      <workItem from="1568272391093" duration="1185000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/../recipe/first.js</url>
+          <url>file://$PROJECT_DIR$/first.js</url>
           <line>10</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>7</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

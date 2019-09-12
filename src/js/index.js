@@ -6,6 +6,5 @@ let words = ['sky', 'wood', 'forest', 'falcon',
 let fel = _.first(words);
 
 console.log(fel);
-
 console.log('Done');
 console.log('ready');

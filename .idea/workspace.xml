@@ -2,14 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/recipe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/recipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/daxia.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Attach_Chrome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/test-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpack.config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpack.config.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
@@ -41,13 +59,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.7.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="tasks" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -63,7 +82,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.Babel-Node">
+  <component name="RunManager" selected="JavaScript Debug.Attach Chrome">
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="html" type="JavascriptDebugType" uri="http://localhost">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/recipe/src/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="Babel-Node" type="NodeJSConfigurationType" node-parameters="-r @babel/register" path-to-js-file="src/js/index.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="NODE_ENV" value="development" />
@@ -79,9 +107,18 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.html" />
+      <item itemvalue="JavaScript Debug.Attach Chrome" />
+      <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Node.js.ES6-Node" />
       <item itemvalue="Node.js.Babel-Node" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -97,7 +134,8 @@
       <workItem from="1568263477453" duration="1399000" />
       <workItem from="1568272290482" duration="49000" />
       <workItem from="1568272350496" duration="37000" />
-      <workItem from="1568272391093" duration="1185000" />
+      <workItem from="1568272391093" duration="8392000" />
+      <workItem from="1568281566367" duration="6199000" />
     </task>
     <servers />
   </component>
@@ -125,13 +163,10 @@
           <line>10</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>7</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/recipe$Attach_Chrome.dat" NAME="Attach Chrome Coverage Results" MODIFIED="1568281276653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

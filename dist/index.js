@@ -6,7 +6,6 @@ var words = ['sky', 'wood', 'forest', 'falcon',
 var fel = _lodash["default"].first(words);
 
 console.log(fel);
-
 console.log('Done');
 console.log('ready');
 //# sourceMappingURL=index.js.map

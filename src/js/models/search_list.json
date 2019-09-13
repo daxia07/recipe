@@ -1,0 +1,112 @@
+{
+  "results": [
+    {
+      "id": 110693,
+      "title": "Herbed Chicken and Veggies",
+      "readyInMinutes": 560,
+      "servings": 4,
+      "image": "herbed-chicken-and-veggies-2-110693.jpg",
+      "imageUrls": [
+        "herbed-chicken-and-veggies-2-110693.jpg",
+        "herbed_chicken_and_veggies-110693.jpg"
+      ]
+    },
+    {
+      "id": 74120,
+      "title": "Lemon-Honey Chicken With Olives",
+      "readyInMinutes": 15,
+      "servings": 8,
+      "image": "lemon-honey-chicken-with-olives-74120.jpg",
+      "imageUrls": [
+        "lemon-honey-chicken-with-olives-74120.jpg"
+      ]
+    },
+    {
+      "id": 101957,
+      "title": "Chicken, Corn, and Potato Stew",
+      "readyInMinutes": 90,
+      "servings": 8,
+      "image": "chicken-corn-and-potato-stew-2-101957.jpg",
+      "imageUrls": [
+        "chicken-corn-and-potato-stew-2-101957.jpg",
+        "chicken_corn_and_potato_stew-101957.jpg"
+      ]
+    },
+    {
+      "id": 136478,
+      "title": "Crock Pot Lemon Chicken",
+      "readyInMinutes": 495,
+      "servings": 4,
+      "image": "crock-pot-lemon-chicken-2-136478.jpg",
+      "imageUrls": [
+        "crock-pot-lemon-chicken-2-136478.jpg"
+      ]
+    },
+    {
+      "id": 284887,
+      "title": "Moroccan Chicken with Green Olives",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "image": "moroccan-chicken-with-green-olives-284887.jpg",
+      "imageUrls": [
+        "moroccan-chicken-with-green-olives-284887.jpg"
+      ]
+    },
+    {
+      "id": 372534,
+      "title": "Fruit-Glazed Roast Chicken",
+      "readyInMinutes": 110,
+      "servings": 8,
+      "image": "Fruit-Glazed-Roast-Chicken-372534.jpg",
+      "imageUrls": [
+        "Fruit-Glazed-Roast-Chicken-372534.jpg"
+      ]
+    },
+    {
+      "id": 695711,
+      "title": "Herb & Lemon Roast Chicken",
+      "readyInMinutes": 120,
+      "servings": 8,
+      "image": "herb-lemon-roast-chicken-695711.jpg",
+      "imageUrls": [
+        "herb-lemon-roast-chicken-695711.jpg"
+      ]
+    },
+    {
+      "id": 41020,
+      "title": "Chicken and Baby Carrots with Lemon and Chives",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "image": "chicken-and-baby-carrots-with-lemon-and-chives-41020.jpg",
+      "imageUrls": [
+        "chicken-and-baby-carrots-with-lemon-and-chives-41020.jpg"
+      ]
+    },
+    {
+      "id": 518361,
+      "title": "Chicken Breasts w/ Curried Apple Stuffing",
+      "readyInMinutes": 70,
+      "servings": 4,
+      "image": "Chicken-Breasts-w--Curried-Apple-Stuffing-518361.jpg",
+      "imageUrls": [
+        "Chicken-Breasts-w--Curried-Apple-Stuffing-518361.jpg"
+      ]
+    },
+    {
+      "id": 698903,
+      "title": "Grandma's Polish-Style Roast Chicken",
+      "readyInMinutes": 125,
+      "servings": 8,
+      "image": "grandmas-polish-style-roast-chicken-698903.jpg",
+      "imageUrls": [
+        "grandmas-polish-style-roast-chicken-698903.jpg"
+      ]
+    }
+  ],
+  "baseUri": "https://spoonacular.com/recipeImages/",
+  "offset": 0,
+  "number": 10,
+  "totalResults": 96,
+  "processingTimeMs": 665,
+  "expires": 1568611950154
+}

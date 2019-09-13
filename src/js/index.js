@@ -1,10 +1,18 @@
-import _ from 'lodash';
+import RecipeAPI from './models/Search';
 
-let words = ['sky', 'wood', 'forest', 'falcon',
-    'pear', 'ocean', 'universe'];
+const init = () => {
+    // let url = (process.env.DEBUG === 'true'? process.env.API_PROXY:'') + process.env.API_URL;
+    return new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
+};
 
-let fel = _.first(words);
+const ffAPI = init();
 
-console.log(fel);
-console.log('Done');
-console.log('ready');
+let ret;
+ffAPI.search('chicken', 1)
+    .then((res)=>{
+        console.log(res);
+        ret = res;
+    })
+    .catch(error=>console.log(error));
+
+console.log('Done!');

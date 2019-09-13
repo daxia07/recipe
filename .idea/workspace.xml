@@ -3,9 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/daxia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/daxia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Attach_Chrome.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Attach_Chrome.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/webpack.config.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/webpack.config.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +44,18 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.7.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
+    <property name="js.last.introduce.type" value="LET" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/js/models" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/js/models" />
       <recent name="$PROJECT_DIR$/dist" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -58,7 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.Babel-Node">
+  <component name="RunManager" selected="JavaScript Debug.Attach Chrome">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
@@ -68,7 +82,7 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/recipe/src/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="Babel-Node" type="NodeJSConfigurationType" node-parameters="-r @babel/register" path-to-js-file="src/js/models/Search.test.js" working-dir="$PROJECT_DIR$">
+    <configuration name="Babel-Node" type="NodeJSConfigurationType" node-parameters="-r @babel/register -r dotenv/config" path-to-js-file="src/js/models/Search.test.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="NODE_ENV" value="development" />
         <env name="DEBUG" value="App" />
@@ -95,8 +109,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.Search.test.js" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Node.js.Search.test.js" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -116,7 +130,9 @@
       <workItem from="1568272290482" duration="49000" />
       <workItem from="1568272350496" duration="37000" />
       <workItem from="1568272391093" duration="8392000" />
-      <workItem from="1568281566367" duration="10092000" />
+      <workItem from="1568281566367" duration="31384000" />
+      <workItem from="1568367476354" duration="4385000" />
+      <workItem from="1568371961848" duration="493000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -125,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568288036722</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated babel runtime and plugin to support async debugging;&#10;TODO: dotenv-webpack not loading constants! IMPORTANT! FIX IT">
+      <created>1568292731388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568292731388</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +169,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks" />
+    <MESSAGE value="updated babel runtime and plugin to support async debugging;&#10;TODO: dotenv-webpack not loading constants! IMPORTANT! FIX IT" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated babel runtime and plugin to support async debugging;&#10;TODO: dotenv-webpack not loading constants! IMPORTANT! FIX IT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -158,18 +182,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/Search.test.js</url>
-          <line>6</line>
-          <properties lambdaOrdinal="-1" />
+          <line>10</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/models/Search.test.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>12</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>13</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/Search.js</url>
-          <line>4</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
+          <line>26</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="NodeJSConfigurationType">
+        <watch expression="process.env.API_KEY" language="JavaScript" />
+        <watch expression="process.env.API_URL" language="JavaScript" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/recipe$Attach_Chrome.dat" NAME="Attach Chrome Coverage Results" MODIFIED="1568281276653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

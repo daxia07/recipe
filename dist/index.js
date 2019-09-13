@@ -1,11 +1,19 @@
-"use strict";var _lodash = _interopRequireDefault(require("lodash"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { "default": obj };}
+"use strict";var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");var _Search = _interopRequireDefault(require("./models/Search"));
 
-var words = ['sky', 'wood', 'forest', 'falcon',
-'pear', 'ocean', 'universe'];
+var init = function init() {
+  var url = (process.env.DEBUG === 'true' ? process.env.API_PROXY : '') + process.env.API_URL;
+  return new _Search["default"](url, process.env.API_KEY);
+};
 
-var fel = _lodash["default"].first(words);
+var ffAPI = init();
 
-console.log(fel);
-console.log('Done');
-console.log('ready');
+var ret;
+ffAPI.search('chicken', 1).
+then(function (res) {
+  console.log(res);
+  ret = res;
+})["catch"](
+function (error) {return console.log(error);});
+
+console.log('Done!');
 //# sourceMappingURL=index.js.map

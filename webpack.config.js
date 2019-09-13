@@ -11,13 +11,17 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "js/bundle.js"
     },
+    resolve: {
+        modules: [path.resolve(__dirname, 'src'), 'node_modules']
+    },
     devServer: {
         contentBase: "./dist"
     },
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "./src/index.html"
+            template: "./src/index.html",
+            inject: false
         }),
         new Dotenv(),
         new webpack.LoaderOptionsPlugin({
@@ -43,8 +47,18 @@ module.exports = {
             use: {
                 loader: "babel-loader"
             }
-        }]
+        },
+            {
+            test: /\.(png|jpe?g|gif)$/i,
+            exclude: /(node_module|bower_components)/,
+            use: {
+                loader: "file-loader",
+                options: { name: '[name].[ext]'}
+            },
+        }
+        ],
     },
     // devtool: "source-map"
-    devtool: "cheap-module-eval-source-map"
+    devtool: "cheap-module-eval-source-map",
+    target: "web"
 };

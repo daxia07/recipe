@@ -1,5 +1,15 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Attach Chrome" type="JavascriptDebugType" uri="http://localhost:63342/recipe/dist/index.html" useBuiltInWebServerPort="true">
-    <method v="2" />
+    <method v="2">
+      <option name="NpmBeforeRunTask" enabled="true">
+        <package-json value="$PROJECT_DIR$/package.json" />
+        <command value="run" />
+        <scripts>
+          <script value="build" />
+        </scripts>
+        <node-interpreter value="project" />
+        <envs />
+      </option>
+    </method>
   </configuration>
 </component>

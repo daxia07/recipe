@@ -17,7 +17,8 @@ module.exports = {
   plugins: [
   new HtmlWebpackPlugin({
     filename: "index.html",
-    template: "./src/index.html" }),
+    template: "./src/index.html",
+    inject: false }),
 
   new Dotenv(),
   new webpack.LoaderOptionsPlugin({
@@ -46,5 +47,6 @@ module.exports = {
 
 
   // devtool: "source-map"
-  devtool: "cheap-module-eval-source-map" };
+  devtool: "cheap-module-eval-source-map",
+  target: "node" };
 //# sourceMappingURL=webpack.config.js.map

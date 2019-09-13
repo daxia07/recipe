@@ -1,14 +1,24 @@
-import RecipeAPI from './models/Search';
+import RecipeAPI from './models/RecipeAPI';
+import SearchView from "./views/SearchView";
 
 const init = () => {
-    // let url = (process.env.DEBUG === 'true'? process.env.API_PROXY:'') + process.env.API_URL;
-    return new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
+    //1. clean up default variables in html;
+    //2. setup api
+    //3. add on click listeners
+    const searchUI = new SearchView(10);
+    // searchUI.clear();
+    return {
+        recipeAPI: new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST),
+        searchUI
+    }
 };
 
-const ffAPI = init();
+const {recipeAPI, searchUI} = init();
 
 let ret;
-ffAPI.search('chicken', 1)
+
+// do search
+recipeAPI.search('chicken', 1)
     .then((res)=>{
         console.log(res);
         ret = res;

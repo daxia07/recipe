@@ -1,4 +1,4 @@
-import RecipeAPI from './Search';
+import RecipeAPI from './RecipeAPI';
 
 let url = (process.env.NODE_ENV !== 'production'? process.env.API_PROXY:'') + process.env.API_URL;
 

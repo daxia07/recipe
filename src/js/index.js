@@ -65,6 +65,12 @@ const {recipeAPI, searchUI} = init();
 //     elements.inputEnter.innerHTML = 'chicken';
 //     elements.searchBtn.click();
 // });
-
+//
+// recipeAPI.search('chicken', 1)
+//     .then((res) => {
+//         console.log(res);
+//         // clearLoader();
+//     })
+//     .catch(error => console.log(error));
 
 

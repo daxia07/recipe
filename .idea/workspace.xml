@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="may encounter with a problem with package path; try to config webpack to resolve">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/views/SearchView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/SearchView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +124,7 @@
       <workItem from="1568281566367" duration="31384000" />
       <workItem from="1568367476354" duration="4385000" />
       <workItem from="1568371961848" duration="9954000" />
-      <workItem from="1568420613985" duration="2021000" />
+      <workItem from="1568420613985" duration="3354000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -157,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568378063431</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="may encounter with a problem with package path; try to config webpack to resolve">
+      <created>1568422661528</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568422661528</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,32 +223,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>34</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>58</line>
+          <line>59</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>41</line>
+          <line>42</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -261,7 +260,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>44</line>
+          <line>45</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="68" />
         </line-breakpoint>

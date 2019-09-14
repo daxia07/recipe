@@ -34,10 +34,11 @@ export default class RecipeAPI {
     async search(query, offset=0){
         if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
             try {
-                const data = Promise.resolve('dummy');
-                // const data = await import('../../assets/mockdata/search_list.json');
-                console.log(data);
-                return data.results;
+                // const data = Promise.resolve('dummy');
+                const data = await import('../../assets/mockdata/recipe_info.json');
+                // const data = await import('assets/mockdata/search_list.json');
+                console.log(data.result);
+                return data.result;
             } catch (e) {
                 console.log(e);
             }

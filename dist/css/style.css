@@ -224,7 +224,7 @@ body {
 
 .results,
 .likes {
-    padding: 3rem 0; }
+    padding: 0 0; }
 .results__list,
 .likes__list {
     list-style: none; }

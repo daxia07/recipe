@@ -10,7 +10,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "js/bundle.js",
-        pathinfo: true
     },
     resolve: {
         modules: [path.resolve(__dirname, 'src'), 'node_modules']

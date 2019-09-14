@@ -1,5 +1,6 @@
 import RecipeAPI from './models/RecipeAPI';
 import SearchView from "./views/SearchView";
+import RecipeView from "./views/RecipeView";
 import {elements, renderLoader, clearLoader} from "./views/base";
 
 const searchUI = new SearchView(10);
@@ -22,35 +23,37 @@ const setupListeners = (actionSearch, actionRecipe) => {
     });
 };
 
-const doTest = () => {
-    recipeAPI.doTest().then(() => console.log('after promise'));
-};
 
 const doSearch = () => {
     // 1. extract info and do search, display spinner
     const query = elements.inputEnter.value;
-    //debugging
-    // query = 'chicken';
-    // renderLoader(elements.searchSection);
+    renderLoader(elements.searchSection);
     // 2. fetch data and clear ui
     // do search
-    // TEST!!
+    // 3. display data
+    // 4. remove spinner
+    elements.inputEnter.value = '';
     if (query) {
         recipeAPI.search(query, 1)
             .then((res) => {
                 console.log(res);
-                // clearLoader();
+                clearLoader();
+                searchUI.loadRecipes(res);
             })
             .catch(error => console.log(error));
     }
-    // 3. display data
-    // 4. remove spinner
 };
 
 const doRecipe = (rid) => {
     // 1. fetch data, display spinner
+    renderLoader(elements.recipeSection);
     recipeAPI.getRecipe(rid)
-        .then(recipe => console.log(recipe));
+        .then(recipe => {
+            console.log(recipe);
+            clearLoader();
+            let recipeView = new RecipeView(recipe);
+            recipeView.setupRecipe();
+        });
     // 2. fetch data and clear ui
     // 3. display data
     // 4. remove spinner
@@ -69,17 +72,13 @@ init();
 // doSearch();
 // doRecipe(1);
 
-// TODO: why is it I cannot set value to DOM element? It seems keep refreshing all the time! Event Listener not working!
-// window.addEventListener('loadend', () => {
-//     elements.inputEnter.innerHTML = 'chicken';
-//     elements.searchBtn.click();
-// });
-//
-// recipeAPI.search('chicken', 1)
-//     .then((res) => {
-//         console.log(res);
-//         // clearLoader();
-//     })
-//     .catch(error => console.log(error));
+//auto test
+window.onload = () => {
+    elements.inputEnter.value = 'chicken';
+    elements.searchBtn.click();
+    document.querySelector('.results__link:last-of-type').click();
+};
+
+
 
 

@@ -37,7 +37,7 @@ export default class RecipeAPI {
     }
 
 
-    async search(query, offset=0){
+    async search(query, offset=0, number=30){
         if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
             try {
                 const mod = await import('assets/mockdata/search_list.json');
@@ -47,7 +47,7 @@ export default class RecipeAPI {
                 console.log(e);
             }
         } else {
-            let api_request = `${this.url}recipes/search?offset=${offset}&q=${query}`;
+            let api_request = `${this.url}recipes/search?offset=${offset}&number=${number}&q=${query}`;
             try {
                 const res = await axios(this.getRequestOption(api_request));
                 return res.data.results
@@ -56,11 +56,4 @@ export default class RecipeAPI {
             }
         }
     }
-
-    doTest() {
-        const delay = duration => new Promise(resolve => setTimeout(resolve, duration));
-        console.log('before promise');
-        return delay(1000)
-    }
-
 }

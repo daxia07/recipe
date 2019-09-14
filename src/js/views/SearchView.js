@@ -1,14 +1,17 @@
 import {elements, elementStrings} from './base';
 
 export default class SearchView {
-    constructor(item_num){
-        this.item_num = item_num;
+    constructor(itemNum){
+        this.itemNum = itemNum;
+        this.currentPage = 1;
     }
+
     clear() {
         elements.resultList.innerHTML = '';
         elements.resultPages.innerHTML = '';
         console.log('cleared');
     }
+
     formatTitle(title, maxLength=34) {
         let post = '';
         if (title.length > maxLength) {
@@ -33,19 +36,32 @@ export default class SearchView {
                 </a>
             </li>`
     }
-    setupPages() {
-        console.log(this.item_num);
-    }
 
     loadRecipes(recipes) {
         // set up data
+        console.log(this.currentPage);
         let recipeStr = '';
-        recipes.forEach(ele => {
-           recipeStr += this.renderOneRecipe(ele);
-        });
+        let loopNum = Math.min(this.itemNum, recipes.length) + (this.currentPage - 1) * this.itemNum;
+        for (let i=(this.currentPage-1)*this.itemNum; i < loopNum; i++) {
+            recipeStr += this.renderOneRecipe(recipes[i]);
+        }
+        //TODO: why prev btn not working?
+        elements.resultsBtnPrev.children[0].textContent = 'Page ' + (this.currentPage - 1).toString();
+        elements.resultsBtnNext.children[0].textContent = 'Page ' + (this.currentPage + 1).toString();
+
+        if (this.currentPage === 1) {
+            // first page no former pages
+            elements.resultsBtnPrev.style.visibility = 'hidden';
+        } else {
+            // middle page
+            elements.resultsBtnPrev.style.visibility = 'visible';
+            if (this.currentPage !== Math.floor(recipes.length/this.itemNum)) {
+                elements.resultsBtnNext.children[0].textContent = 'Page ' + (this.currentPage + 1).toString();
+            } else {
+                // last page, load more
+                elements.resultsBtnNext.children[0].textContent = 'Load More';
+            }
+        }
         elements.resultList.innerHTML = recipeStr;
-        // set up pages
-        this.setupPages();
-        console.log('recipes loaded');
     }
 }

@@ -6,6 +6,9 @@ import {elements, renderLoader, clearLoader} from "./views/base";
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
 
+const bufferData = {};
+let currentSearch = '';
+
 const setupListeners = (actionSearch, actionRecipe) => {
     elements.searchBtn.addEventListener('click', (evt => {
         evt.preventDefault();
@@ -21,8 +24,19 @@ const setupListeners = (actionSearch, actionRecipe) => {
         evt.preventDefault();
         actionRecipe(location.hash.split('#')[1]);
     });
-};
+    elements.resultsBtnPrev.addEventListener('click', evt => {
+        evt.preventDefault();
+        searchUI.currentPage -= 1;
+        searchUI.loadRecipes(bufferData[currentSearch]);
+    });
 
+    elements.resultsBtnNext.addEventListener('click', evt => {
+        //TODO: load more btn to invoke search
+        evt.preventDefault();
+        searchUI.currentPage += 1;
+        searchUI.loadRecipes(bufferData[currentSearch]);
+    });
+};
 
 const doSearch = () => {
     // 1. extract info and do search, display spinner
@@ -37,6 +51,12 @@ const doSearch = () => {
         recipeAPI.search(query, 1)
             .then((res) => {
                 console.log(res);
+                currentSearch = query;
+                if (bufferData[query] === undefined) {
+                    bufferData[query] = res;
+                } else {
+                    bufferData[query] = [...bufferData[query], ...res];
+                }
                 clearLoader();
                 searchUI.loadRecipes(res);
             })

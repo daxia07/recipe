@@ -45,15 +45,13 @@ export default class SearchView {
         for (let i=(this.currentPage-1)*this.itemNum; i < loopNum; i++) {
             recipeStr += this.renderOneRecipe(recipes[i]);
         }
-        //TODO: why prev btn not working?
-        elements.resultsBtnPrev.children[0].textContent = 'Page ' + (this.currentPage - 1).toString();
         elements.resultsBtnNext.children[0].textContent = 'Page ' + (this.currentPage + 1).toString();
-
         if (this.currentPage === 1) {
             // first page no former pages
             elements.resultsBtnPrev.style.visibility = 'hidden';
         } else {
             // middle page
+            elements.resultsBtnPrev.children[1].textContent = 'Page ' + (this.currentPage - 1).toString();
             elements.resultsBtnPrev.style.visibility = 'visible';
             if (this.currentPage !== Math.floor(recipes.length/this.itemNum)) {
                 elements.resultsBtnNext.children[0].textContent = 'Page ' + (this.currentPage + 1).toString();
@@ -63,5 +61,6 @@ export default class SearchView {
             }
         }
         elements.resultList.innerHTML = recipeStr;
+
     }
 }

@@ -1,11 +1,12 @@
-import element from './element';
+import {elements} from './base';
 
 export default class SearchView {
     constructor(item_num){
         this.item_num = item_num;
     }
     clear() {
-        element.resultList.innerHTML = '';
+        elements.resultList.innerHTML = '';
+        elements.resultPages.innerHTML = '';
         console.log('cleared');
     }
     renderOneRecipe(item) {

@@ -7,17 +7,40 @@ export default class RecipeAPI {
         this.host = host;
     }
 
-    //TODO: add another function to get recipe info
     async getRecipe(rid) {
-        return id;
+        if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
+            const data = await import('../../assets/mockdata/recipe_info.json');
+            return data.results;
+        } else {
+            let api_request;
+            api_request = `${this.url}recipes/${rid}/information`;
+            console.log(api_request);
+            try {
+                const ret = await axios({
+                    method: 'get',
+                    url: api_request,
+                    headers: {
+                        'x-rapidapi-host': this.host,
+                        'x-rapidapi-key': this.key
+                    }});
+                return ret.data.result;
+            } catch (e) {
+                console.log(e);
+            }
+        }
     }
 
 
     async search(query, offset=0){
-        console.log(this.host);
         if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
-            const data = await import('../../assets/mockdata/search_list.json');
-            return data.results;
+            try {
+                const data = Promise.resolve('dummy');
+                // const data = await import('../../assets/mockdata/search_list.json');
+                console.log(data);
+                return data.results;
+            } catch (e) {
+                console.log(e);
+            }
         } else {
             let api_request;
             api_request = `${this.url}recipes/search?offset=${offset}&q=${query}`;
@@ -32,6 +55,7 @@ export default class RecipeAPI {
                     }});
                 return ret.data.result;
             } catch (e) {
+                console.log('really?');
                 console.log(e);
             }
         }

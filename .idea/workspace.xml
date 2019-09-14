@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="may encounter with a problem with package path; try to config webpack to resolve">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="Abandon async/await to Promises">
       <change beforePath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -91,11 +89,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.html" />
       <item itemvalue="JavaScript Debug.Attach Chrome" />
+      <item itemvalue="JavaScript Debug.html" />
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Node.js.ES6-Node" />
       <item itemvalue="Node.js.Babel-Node" />
+      <item itemvalue="Node.js.ES6-Node" />
       <item itemvalue="Node.js.RecipeAPI.test.js" />
     </list>
     <recent_temporary>
@@ -222,47 +220,14 @@
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>59</line>
-          <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>58</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>42</line>
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>39</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>40</line>
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
           <line>25</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
           <line>27</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.js</url>
-          <line>45</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -7,7 +7,7 @@ export default class RecipeAPI {
         this.host = host;
     }
 
-    getReqeustOption(request) {
+    getRequestOption(request) {
         return {
             method: 'get',
             url: request,
@@ -20,14 +20,16 @@ export default class RecipeAPI {
     async getRecipe(rid) {
         if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
             try {
-                return import('assets/mockdata/recipe_info.json').then(mod => Promise.resolve(mod.default.results));
+                const mod = await import('assets/mockdata/recipe_info.json');
+                return mod.default;
             } catch (e) {
                 console.log(e);
             }
         } else {
             let api_request = `${this.url}recipes/${rid}/information`;
             try {
-                return axios(this.getReqeustOption(api_request)).then(res => Promise.resolve(res.data))
+                const res = await axios(this.getRequestOption(api_request));
+                return res.data
             } catch (e) {
                 console.log(e);
             }
@@ -38,17 +40,27 @@ export default class RecipeAPI {
     async search(query, offset=0){
         if (process.env.DEBUG === 'true' && process.env.MOCKDATA === 'true') {
             try {
-                return import('assets/mockdata/search_list.json').then(mod => Promise.resolve(mod.default.results));
+                const mod = await import('assets/mockdata/search_list.json');
+                console.log(mod);
+                return mod.default.results;
             } catch (e) {
                 console.log(e);
             }
         } else {
             let api_request = `${this.url}recipes/search?offset=${offset}&q=${query}`;
             try {
-                return axios(this.getReqeustOption(api_request)).then(res => Promise.resolve(res.data.results))
+                const res = await axios(this.getRequestOption(api_request));
+                return res.data.results
             } catch (e) {
                 console.log(e);
             }
         }
     }
+
+    doTest() {
+        const delay = duration => new Promise(resolve => setTimeout(resolve, duration));
+        console.log('before promise');
+        return delay(1000)
+    }
+
 }

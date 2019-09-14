@@ -9,7 +9,8 @@ module.exports = {
     entry: ["babel-polyfill", "./src/js/index.js"],
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "js/bundle.js"
+        filename: "js/bundle.js",
+        pathinfo: true
     },
     resolve: {
         modules: [path.resolve(__dirname, 'src'), 'node_modules']

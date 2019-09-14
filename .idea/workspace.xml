@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="Abandon async/await to Promises">
+    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/daxia.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/daxia.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +41,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/js/models" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -89,11 +93,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.Attach Chrome" />
       <item itemvalue="JavaScript Debug.html" />
+      <item itemvalue="JavaScript Debug.Attach Chrome" />
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Node.js.Babel-Node" />
       <item itemvalue="Node.js.ES6-Node" />
+      <item itemvalue="Node.js.Babel-Node" />
       <item itemvalue="Node.js.RecipeAPI.test.js" />
     </list>
     <recent_temporary>
@@ -159,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568422661528</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="filled API functions">
+      <created>1568433311264</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568433311264</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +195,8 @@
     <MESSAGE value="added mock data with dynamic import from json file; added file loader; added babel plugin; added file-loader in webpack; enabled to fetch search data from RapidAPI;&#10;TODO: solve the data format problem with promise" />
     <MESSAGE value="added interfaces for ui; adjusted template" />
     <MESSAGE value="may encounter with a problem with package path; try to config webpack to resolve" />
-    <option name="LAST_COMMIT_MESSAGE" value="may encounter with a problem with package path; try to config webpack to resolve" />
+    <MESSAGE value="filled API functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="filled API functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -211,23 +223,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>42</line>
-          <option name="timeStamp" value="45" />
+          <line>50</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="96" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>20</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>25</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>27</line>
-          <option name="timeStamp" value="67" />
+          <line>53</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

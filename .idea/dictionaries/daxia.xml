@@ -3,6 +3,7 @@
     <words>
       <w>axios</w>
       <w>dotenv</w>
+      <w>pathinfo</w>
     </words>
   </dictionary>
 </component>

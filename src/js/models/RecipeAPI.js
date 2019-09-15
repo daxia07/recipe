@@ -56,4 +56,15 @@ export default class RecipeAPI {
             }
         }
     }
+
+    async getRandomRecipe(num=1) {
+        let api_request = `${this.url}recipes/random?number=${num}`;
+        try {
+            const res = await axios(this.getRequestOption(api_request));
+            return res.data.recipes[0]
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
 }

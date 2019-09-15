@@ -10,7 +10,7 @@ const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, proces
 
 //TODO: fetch a random recipe
 //TODO: fetch a random search
-let recipeView = {};
+let recipeView;
 
 const bufferData = {};
 let currentSearch = '';
@@ -169,7 +169,18 @@ const doRecipe = (rid) => {
             clearLoader();
             recipeView = new RecipeView(recipe);
             recipeView.setupRecipe();
-        });
+        }).catch(error => console.log(error));
+};
+
+const loadRandomRecipe = () => {
+    renderLoader(elements.recipeSection);
+    recipeAPI.getRandomRecipe(1)
+        .then((recipe) => {
+            clearLoader();
+            recipeView = new RecipeView(recipe);
+            recipeView.setupRecipe();
+        })
+        .catch(error => console.log(error));
 };
 
 
@@ -179,6 +190,10 @@ const init = () => {
     shoppingList = shoppingList.filter(ele => ele.amount > 0);
     localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
     updateShoppingList(shoppingList);
+    if (recipeView === undefined) {
+        // fetch a random and init
+        loadRandomRecipe();
+    }
     // setupListeners(doSearch, doRecipe);
     // searchUI.clear();
 };
@@ -190,11 +205,11 @@ init();
 // doRecipe(1);
 
 //auto test
-window.onload = () => {
-    elements.inputEnter.value = 'chicken';
-    elements.searchBtn.click();
-    document.querySelector('.results__link:last-of-type').click();
-};
+// window.onload = () => {
+//     elements.inputEnter.value = 'chicken';
+//     elements.searchBtn.click();
+//     document.querySelector('.results__link:last-of-type').click();
+// };
 
 
 

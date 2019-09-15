@@ -174,11 +174,14 @@ const doRecipe = (rid) => {
 
 const loadRandomRecipe = () => {
     renderLoader(elements.recipeSection);
-    recipeAPI.getRandomRecipe(1)
-        .then((recipe) => {
+    recipeAPI.getRandomRecipe(31)
+        .then((recipes) => {
             clearLoader();
+            let [recipe, ...rest] = recipes;
             recipeView = new RecipeView(recipe);
             recipeView.setupRecipe();
+            searchUI.loadRecipes(rest);
+
         })
         .catch(error => console.log(error));
 };
@@ -192,10 +195,8 @@ const init = () => {
     updateShoppingList(shoppingList);
     if (recipeView === undefined) {
         // fetch a random and init
-        loadRandomRecipe();
+        // loadRandomRecipe();
     }
-    // setupListeners(doSearch, doRecipe);
-    // searchUI.clear();
 };
 
 console.log('do it');

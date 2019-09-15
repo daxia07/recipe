@@ -57,11 +57,11 @@ export default class RecipeAPI {
         }
     }
 
-    async getRandomRecipe(num=1) {
-        let api_request = `${this.url}recipes/random?number=${num}`;
+    async getRandomRecipe(num=1, tags='dessert') {
+        let api_request = `${this.url}recipes/random?number=${num}&tags=${tags}`;
         try {
             const res = await axios(this.getRequestOption(api_request));
-            return res.data.recipes[0]
+            return res.data.recipes
         } catch (e) {
             console.log(e);
         }

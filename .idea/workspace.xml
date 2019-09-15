@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" afterDir="false" />
     </list>
@@ -127,7 +128,7 @@
       <workItem from="1568371961848" duration="9954000" />
       <workItem from="1568420613985" duration="3354000" />
       <workItem from="1568502165305" duration="18622000" />
-      <workItem from="1568528466051" duration="8858000" />
+      <workItem from="1568528466051" duration="10117000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -227,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568550123946</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added random load first recipe">
+      <created>1568551100442</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568551100442</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +269,8 @@
     <MESSAGE value="seems something wrong with dist index.html; webpack was always trying to direct the script to index.js instead of bundle.js like it did before; TODO: try fix this" />
     <MESSAGE value="it turned out that I removed the &lt;script&gt; part and body ending tag in src/index.html; It's stupid, never should have happened;&#10;Another annoying thing is that I edited the webpack config file in dist/ folder. Try figure out how it worked, and if it was useless, ignore the file in rules;" />
     <MESSAGE value="fixed bug caused by mistakenly save localStorage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug caused by mistakenly save localStorage" />
+    <MESSAGE value="added random load first recipe" />
+    <option name="LAST_COMMIT_MESSAGE" value="added random load first recipe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,6 +289,18 @@
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.test.js</url>
           <line>6</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>197</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>178</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

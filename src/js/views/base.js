@@ -21,7 +21,8 @@ export const elements = {
     serveNum: document.querySelector('.recipe__info-data.recipe__info-data--people'),
     shoppingList: document.querySelector('.shopping__list'),
     recipeAddList: document.querySelector('.recipe__ingredients .recipe__btn'),
-    shoppingListDelete: document.querySelector('.shopping__list')
+    shoppingListDelete: document.querySelector('.shopping__list'),
+    shoppingListInput: document.querySelector('.shopping__list')
 };
 
 export const elementStrings = {

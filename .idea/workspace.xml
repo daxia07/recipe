@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/views/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/shoppingListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/shoppingListView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
+    <property name="TODO_SCOPE" value="Project Files" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.7.0" />
@@ -129,7 +128,7 @@
       <workItem from="1568371961848" duration="9954000" />
       <workItem from="1568420613985" duration="3354000" />
       <workItem from="1568502165305" duration="18622000" />
-      <workItem from="1568528466051" duration="2234000" />
+      <workItem from="1568528466051" duration="7858000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568527923048</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="it turned out that I removed the &lt;script&gt; part and body ending tag in src/index.html; It's stupid, never should have happened;&#10;Another annoying thing is that I edited the webpack config file in dist/ folder. Try figure out how it worked, and if it was useless, ignore the file in rules;">
+      <created>1568537256341</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568537256341</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +253,8 @@
     <MESSAGE value="fixed pagination bug;" />
     <MESSAGE value="finished likeView" />
     <MESSAGE value="seems something wrong with dist index.html; webpack was always trying to direct the script to index.js instead of bundle.js like it did before; TODO: try fix this" />
-    <option name="LAST_COMMIT_MESSAGE" value="seems something wrong with dist index.html; webpack was always trying to direct the script to index.js instead of bundle.js like it did before; TODO: try fix this" />
+    <MESSAGE value="it turned out that I removed the &lt;script&gt; part and body ending tag in src/index.html; It's stupid, never should have happened;&#10;Another annoying thing is that I edited the webpack config file in dist/ folder. Try figure out how it worked, and if it was useless, ignore the file in rules;" />
+    <option name="LAST_COMMIT_MESSAGE" value="it turned out that I removed the &lt;script&gt; part and body ending tag in src/index.html; It's stupid, never should have happened;&#10;Another annoying thing is that I edited the webpack config file in dist/ folder. Try figure out how it worked, and if it was useless, ignore the file in rules;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -266,6 +273,18 @@
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.test.js</url>
           <line>6</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>91</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>112</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

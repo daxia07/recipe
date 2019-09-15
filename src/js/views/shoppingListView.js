@@ -1,6 +1,6 @@
 import {elements} from "./base";
 
-const endingZeros = (num) => {
+export const endingZeros = (num) => {
     if (num < 10) {
         return '1'
     }
@@ -12,7 +12,7 @@ const endingZeros = (num) => {
     return '1' + ending_str
 };
 
-export default function updateShoppingList(shoppingList) {
+export  function updateShoppingList(shoppingList) {
     let htmlStr = '';
     shoppingList.forEach(item => {
         htmlStr += `<li class="shopping__item">
@@ -26,7 +26,8 @@ export default function updateShoppingList(shoppingList) {
                                 <use href="img/icons.svg#icon-circle-with-cross"></use>
                             </svg>
                         </button>
-                    </li>`
+                    </li>`;
     });
+
     elements.shoppingList.innerHTML = htmlStr;
 };

@@ -3,12 +3,13 @@ import SearchView from "./views/SearchView";
 import RecipeView from "./views/RecipeView";
 import {elements, renderLoader, clearLoader} from "./views/base";
 import {updateLikesPanel} from "./views/LikeView";
-import updateShoppingList from "./views/shoppingListView";
+import {updateShoppingList, endingZeros} from "./views/shoppingListView";
 
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
-// fetch a random recipe
 
+//TODO: fetch a random recipe
+//TODO: fetch a random search
 let recipeView = {};
 
 const bufferData = {};
@@ -37,7 +38,7 @@ const setupListeners = (actionSearch, actionRecipe) => {
         searchUI.loadRecipes(bufferData[currentSearch]);
     });
     elements.resultsBtnNext.addEventListener('click', evt => {
-        //TODO: load more btn to invoke search
+        //TODO: load more btn for  search category and parameters
         evt.preventDefault();
         searchUI.currentPage += 1;
         searchUI.loadRecipes(bufferData[currentSearch]);
@@ -87,8 +88,8 @@ const setupListeners = (actionSearch, actionRecipe) => {
     }));
     elements.recipeAddList.addEventListener('click', evt => {
         // add to list
-        currentServe = parseInt(elements.serveNum.textContent);
         evt.preventDefault();
+        currentServe = parseInt(elements.serveNum.textContent);
         // do more
         for (let ingredient of recipeView.recipe.extendedIngredients) {
             let ingredientPack = recipeView.pickedIngredients(ingredient);
@@ -108,13 +109,30 @@ const setupListeners = (actionSearch, actionRecipe) => {
         updateShoppingList(shoppingList);
     });
     elements.shoppingListDelete.addEventListener('click', evt => {
-            const closestBtn = evt.target.closest('button.btn-tiny');
-            if (evt.target && closestBtn) {
+        const closestBtn = evt.target.closest('button.btn-tiny');
+        let shoppingList = JSON.parse(localStorage.getItem('shoppingList') || '[]');
+        if (evt.target && closestBtn) {
                 const name = closestBtn.parentNode.querySelector('.shopping__description').textContent;
                 shoppingList = shoppingList.filter(item => item.name !== name);
                 updateShoppingList(shoppingList);
-            }
+                localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+        }
         });
+    elements.shoppingListInput.addEventListener('input', evt => {
+        console.log(evt.target);
+        let value = evt.target.value;
+        name = evt.target.parentNode.parentNode.children[1].textContent;
+        console.log(name);
+        let shoppingList = JSON.parse(localStorage.getItem('shoppingList') || '[]');
+        for (let i=0; i < shoppingList.length; i++ ) {
+            if (shoppingList[i].name === name) {
+                shoppingList[i].amount = parseFloat(value);
+                evt.target.step = endingZeros(parseFloat(value));
+                break;
+            }
+        }
+        localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+    })
 };
 
 const doSearch = () => {
@@ -157,7 +175,10 @@ const doRecipe = (rid) => {
 
 const init = () => {
     setupListeners(doSearch, doRecipe);
-
+    let shoppingList = JSON.parse(localStorage.getItem('shoppingList') || '[]');
+    shoppingList = shoppingList.filter(ele => ele.amount > 0);
+    localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
+    updateShoppingList(shoppingList);
     // setupListeners(doSearch, doRecipe);
     // searchUI.clear();
 };

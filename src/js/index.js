@@ -7,6 +7,8 @@ import updateShoppingList from "./views/shoppingListView";
 
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
+// fetch a random recipe
+
 let recipeView = {};
 
 const bufferData = {};
@@ -72,14 +74,12 @@ const setupListeners = (actionSearch, actionRecipe) => {
             if (currentServe < 2) {
                 alert('Cannot do minus any more!');
             } else {
-                console.log('minus clicked');
                 currentServe -= 1;
                 recipeView.renderIngredients(currentServe);
                 elements.serveNum.textContent = currentServe.toString();
             }
         } else {
             // do add
-            console.log('add clicked');
             currentServe += 1;
             recipeView.renderIngredients(currentServe);
             elements.serveNum.textContent = currentServe.toString();
@@ -92,7 +92,6 @@ const setupListeners = (actionSearch, actionRecipe) => {
         // do more
         for (let ingredient of recipeView.recipe.extendedIngredients) {
             let ingredientPack = recipeView.pickedIngredients(ingredient);
-            console.log(ingredientPack);
             ingredientPack.amount *= currentServe / recipeView.recipe.servings;
             let existed = false;
             for (let i of shoppingList) {
@@ -108,13 +107,14 @@ const setupListeners = (actionSearch, actionRecipe) => {
         }
         updateShoppingList(shoppingList);
     });
-    elements.shoppingList.addEventListener('click', evt => {
-        console.log('delete clicked!');
-        const closestEle = evt.target.closest('button.btn-tiny');
-        const name = closestEle.parentNode.querySelector('.shopping__description').textContent;
-        shoppingList = shoppingList.filter(item => item.name !== name);
-        updateShoppingList(shoppingList);
-    })
+    elements.shoppingListDelete.addEventListener('click', evt => {
+            const closestBtn = evt.target.closest('button.btn-tiny');
+            if (evt.target && closestBtn) {
+                const name = closestBtn.parentNode.querySelector('.shopping__description').textContent;
+                shoppingList = shoppingList.filter(item => item.name !== name);
+                updateShoppingList(shoppingList);
+            }
+        });
 };
 
 const doSearch = () => {

@@ -17,11 +17,11 @@ export const elements = {
     likeIcon: document.querySelector('.recipe__love svg'),
     likesMenu: document.querySelector('.likes__panel'),
     likesList: document.querySelector('.likes__list'),
-    btnTiny: document.querySelectorAll('.recipe__details .btn-tiny'),
+    btnTiny: document.querySelectorAll('.recipe__info-buttons .btn-tiny'),
     serveNum: document.querySelector('.recipe__info-data.recipe__info-data--people'),
     shoppingList: document.querySelector('.shopping__list'),
     recipeAddList: document.querySelector('.recipe__ingredients .recipe__btn'),
-    shoppingListDelete: document.querySelectorAll('.shopping__delete')
+    shoppingListDelete: document.querySelector('.shopping__list')
 };
 
 export const elementStrings = {

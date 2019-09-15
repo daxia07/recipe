@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/models/RecipeAPI.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +126,8 @@
       <workItem from="1568371961848" duration="9954000" />
       <workItem from="1568420613985" duration="3354000" />
       <workItem from="1568502165305" duration="18622000" />
-      <workItem from="1568528466051" duration="10117000" />
+      <workItem from="1568528466051" duration="10238000" />
+      <workItem from="1568585837659" duration="3783000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -235,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568551100442</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format">
+      <created>1568552275632</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1568552275632</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +276,8 @@
     <MESSAGE value="it turned out that I removed the &lt;script&gt; part and body ending tag in src/index.html; It's stupid, never should have happened;&#10;Another annoying thing is that I edited the webpack config file in dist/ folder. Try figure out how it worked, and if it was useless, ignore the file in rules;" />
     <MESSAGE value="fixed bug caused by mistakenly save localStorage" />
     <MESSAGE value="added random load first recipe" />
-    <option name="LAST_COMMIT_MESSAGE" value="added random load first recipe" />
+    <MESSAGE value="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,15 +299,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>197</line>
-          <properties lambdaOrdinal="-1" />
+          <line>229</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>178</line>
-          <properties lambdaOrdinal="-1" />
+          <line>201</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/views/SearchView.js</url>
+          <line>43</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

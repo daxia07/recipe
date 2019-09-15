@@ -1,21 +1,32 @@
 import RecipeAPI from './models/RecipeAPI';
 import SearchView from "./views/SearchView";
 import RecipeView from "./views/RecipeView";
-import {elements, renderLoader, clearLoader} from "./views/base";
+import {elements, renderLoader, clearLoader, elementStrings} from "./views/base";
 import {updateLikesPanel} from "./views/LikeView";
 import {updateShoppingList, endingZeros} from "./views/shoppingListView";
 
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
 
-//TODO: fetch a random recipe
-//TODO: fetch a random search
 let recipeView;
 
-const bufferData = {};
+const bufferSearch = {};
+const bufferRecipes = {};
 let currentSearch = '';
 let shoppingList = [];
 let currentServe = 0;
+
+const getBufferedRecipe = rid => {
+    for (let tag in bufferRecipes) {
+        for (let entry of bufferRecipes[tag]) {
+            if (entry.id === rid) {
+                return entry
+            }
+        }
+    }
+    return undefined;
+};
+
 
 const setupListeners = (actionSearch, actionRecipe) => {
     elements.searchBtn.addEventListener('click', (evt => {
@@ -35,13 +46,13 @@ const setupListeners = (actionSearch, actionRecipe) => {
     elements.resultsBtnPrev.addEventListener('click', evt => {
         evt.preventDefault();
         searchUI.currentPage -= 1;
-        searchUI.loadRecipes(bufferData[currentSearch]);
+        searchUI.loadRecipes(bufferSearch[currentSearch]);
     });
     elements.resultsBtnNext.addEventListener('click', evt => {
         //TODO: load more btn for  search category and parameters
         evt.preventDefault();
         searchUI.currentPage += 1;
-        searchUI.loadRecipes(bufferData[currentSearch]);
+        searchUI.loadRecipes(bufferSearch[currentSearch]);
     });
     elements.likeIcon.addEventListener('click', evt => {
         evt.preventDefault();
@@ -62,13 +73,12 @@ const setupListeners = (actionSearch, actionRecipe) => {
             likedList = likedList.filter(ele => ele.id !== recipeView.recipe.id);
         }
         localStorage.setItem('likedList', JSON.stringify(likedList));
-        console.log(localStorage.getItem('likedList'));
         // update view
         updateLikesPanel(likedList);
     });
     elements.btnTiny.forEach(btn => btn.addEventListener('click', evt => {
         evt.preventDefault();
-        currentServe = parseInt(elements.serveNum.textContent);
+        // currentServe = parseInt(elements.serveNum.textContent);
         const closestEle = evt.target.closest('button.btn-tiny');
         if (closestEle.getElementsByTagName('use')[0].getAttribute('href').includes('minus')) {
             // do minus
@@ -89,7 +99,7 @@ const setupListeners = (actionSearch, actionRecipe) => {
     elements.recipeAddList.addEventListener('click', evt => {
         // add to list
         evt.preventDefault();
-        currentServe = parseInt(elements.serveNum.textContent);
+        // currentServe = parseInt(elements.serveNum.textContent);
         // do more
         for (let ingredient of recipeView.recipe.extendedIngredients) {
             let ingredientPack = recipeView.pickedIngredients(ingredient);
@@ -149,10 +159,10 @@ const doSearch = () => {
             .then((res) => {
                 console.log(res);
                 currentSearch = query;
-                if (bufferData[query] === undefined) {
-                    bufferData[query] = res;
+                if (bufferSearch[query] === undefined) {
+                    bufferSearch[query] = res;
                 } else {
-                    bufferData[query] = [...bufferData[query], ...res];
+                    bufferSearch[query] = [...bufferSearch[query], ...res];
                 }
                 clearLoader();
                 searchUI.loadRecipes(res);
@@ -163,24 +173,46 @@ const doSearch = () => {
 
 const doRecipe = (rid) => {
     // 1. fetch data, display spinner
-    renderLoader(elements.recipeSection);
-    recipeAPI.getRecipe(rid)
-        .then(recipe => {
-            clearLoader();
-            recipeView = new RecipeView(recipe);
-            recipeView.setupRecipe();
-        }).catch(error => console.log(error));
+    // if found use; else fetch
+    // TODO: call search buffer
+    let bufRec = getBufferedRecipe(rid);
+    if (bufRec === undefined) {
+        renderLoader(elements.recipeSection);
+        recipeAPI.getRecipe(rid)
+            .then(recipe => {
+                clearLoader();
+                currentServe = recipe.servings;
+                recipeView = new RecipeView(recipe);
+                recipeView.setupRecipe();
+            }).catch(error => console.log(error));
+    } else {
+        currentServe = bufRec.servings;
+        recipeView = new RecipeView(bufRec);
+        recipeView.setupRecipe();
+    }
 };
 
 const loadRandomRecipe = () => {
     renderLoader(elements.recipeSection);
-    recipeAPI.getRandomRecipe(31)
+    const tagList = ['dessert', 'pizza', 'cookie', 'noodles', 'chicken', 'BBQ', 'curry'];
+    let tagName = tagList[Math.floor(Math.random() * tagList.length)];
+    recipeAPI.getRandomRecipe(31, tagName)
         .then((recipes) => {
             clearLoader();
             let [recipe, ...rest] = recipes;
             recipeView = new RecipeView(recipe);
             recipeView.setupRecipe();
-            searchUI.loadRecipes(rest);
+            currentServe = recipe.servings;
+            bufferRecipes[tagName] = rest;
+            // TODO: use them elsewhere check if id exists
+            const picker = (({ id, image, title, servings, readyInMinutes }) => ({ id, image, title, servings, readyInMinutes }));
+            let formattedRecipes = [];
+            rest.forEach(ele => {
+                ele.image = ele.image.replace(elementStrings.baseUri, '');
+                formattedRecipes.push(picker(ele))
+            });
+            bufferRecipes[tagName] = formattedRecipes;
+            searchUI.loadRecipes(formattedRecipes);
 
         })
         .catch(error => console.log(error));
@@ -195,11 +227,10 @@ const init = () => {
     updateShoppingList(shoppingList);
     if (recipeView === undefined) {
         // fetch a random and init
-        // loadRandomRecipe();
+        loadRandomRecipe();
     }
 };
 
-console.log('do it');
 init();
 // doTest();
 // doSearch();

@@ -13,7 +13,10 @@ export const elements = {
     recipeBy: document.querySelector('.recipe__by'),
     recipeBtn: document.querySelector('.recipe__directions .recipe__btn'),
     resultsBtnPrev: document.querySelector('.results__btn--prev'),
-    resultsBtnNext: document.querySelector('.results__btn--next')
+    resultsBtnNext: document.querySelector('.results__btn--next'),
+    likeIcon: document.querySelector('.recipe__love svg'),
+    likesMenu: document.querySelector('.likes__panel'),
+    likesList: document.querySelector('.likes__list')
 };
 
 export const elementStrings = {

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
+    <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="add pagination feature;&#10;prev page not working, try figure out why">
+      <change afterPath="$PROJECT_DIR$/src/js/views/LikeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/mockdata/search_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mockdata/search_list.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/views/SearchView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/SearchView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/RecipeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/RecipeView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +128,7 @@
       <workItem from="1568367476354" duration="4385000" />
       <workItem from="1568371961848" duration="9954000" />
       <workItem from="1568420613985" duration="3354000" />
+      <workItem from="1568502165305" duration="8058000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -184,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568461246453</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add pagination feature;&#10;prev page not working, try figure out why">
+      <created>1568466803786</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1568466803786</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixed pagination bug;">
+      <created>1568503064511</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1568503064511</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +228,9 @@
     <MESSAGE value="filled API functions" />
     <MESSAGE value="It turns out that I forgot to prevent the default actions!!!" />
     <MESSAGE value="load data to pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="load data to pages" />
+    <MESSAGE value="add pagination feature;&#10;prev page not working, try figure out why" />
+    <MESSAGE value="fixed pagination bug;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pagination bug;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -231,6 +249,12 @@
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.test.js</url>
           <line>6</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/views/LikeView.js</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

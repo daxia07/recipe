@@ -2,9 +2,11 @@ import RecipeAPI from './models/RecipeAPI';
 import SearchView from "./views/SearchView";
 import RecipeView from "./views/RecipeView";
 import {elements, renderLoader, clearLoader} from "./views/base";
+import {updateLikesPanel} from "./views/LikeView";
 
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
+let recipeView = {};
 
 const bufferData = {};
 let currentSearch = '';
@@ -29,12 +31,35 @@ const setupListeners = (actionSearch, actionRecipe) => {
         searchUI.currentPage -= 1;
         searchUI.loadRecipes(bufferData[currentSearch]);
     });
-
     elements.resultsBtnNext.addEventListener('click', evt => {
         //TODO: load more btn to invoke search
         evt.preventDefault();
         searchUI.currentPage += 1;
         searchUI.loadRecipes(bufferData[currentSearch]);
+    });
+    elements.likeIcon.addEventListener('click', evt => {
+        evt.preventDefault();
+        console.log(evt.target);
+        const closestEle = evt.target.closest('svg');
+        const isLiked = closestEle.children[0].getAttribute('href').split('#')[1] === 'icon-heart';
+        recipeView.toggleLikeBtn(isLiked);
+        let likedList = JSON.parse(localStorage.getItem('likedList') || '[]');
+        if (!isLiked) {
+            // add data to localStorage
+            let recipeLiked = {
+                id: recipeView.recipe.id,
+                image: recipeView.recipe.image,
+                title: recipeView.recipe.title,
+                sourceName: recipeView.recipe.sourceName
+            };
+            likedList.push(recipeLiked);
+        } else {
+            likedList = likedList.filter(ele => ele.id !== recipeView.recipe.id);
+        }
+        localStorage.setItem('likedList', JSON.stringify(likedList));
+        console.log(localStorage.getItem('likedList'));
+        // update view
+        updateLikesPanel(likedList);
     });
 };
 
@@ -69,14 +94,10 @@ const doRecipe = (rid) => {
     renderLoader(elements.recipeSection);
     recipeAPI.getRecipe(rid)
         .then(recipe => {
-            console.log(recipe);
             clearLoader();
-            let recipeView = new RecipeView(recipe);
+            recipeView = new RecipeView(recipe);
             recipeView.setupRecipe();
         });
-    // 2. fetch data and clear ui
-    // 3. display data
-    // 4. remove spinner
 };
 
 

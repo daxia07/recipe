@@ -30,7 +30,26 @@ export default class RecipeView {
         elements.recipeDataMinutes.innerHTML = this.recipe.readyInMinutes;
         elements.recipeDataPeople.innerHTML = this.recipe.servings;
         elements.recipeBy.innerHTML = this.recipe.sourceName;
-        console.log(this.recipe.sourceUrl);
         elements.recipeBtn.setAttribute('href', this.recipe.sourceUrl);
+        this.showLikedBtn();
     }
+
+    showLikedBtn() {
+        const likedList = JSON.parse(localStorage.getItem("likedList") || "[]");
+        let iconString = 'icon-heart-outlined';
+        likedList.forEach(ele => {
+            console.log(ele.id);
+            console.log(parseInt(location.hash.split('#')[1]));
+            if (ele.id === parseInt(location.hash.split('#')[1])) {
+                iconString = 'icon-heart';
+            }
+        });
+        elements.likeIcon.children[0].setAttribute('href', `img/icons.svg#${iconString}`);
+    }
+
+    toggleLikeBtn(isLiked) {
+        const iconString = isLiked ? 'icon-heart-outlined':'icon-heart';
+        elements.likeIcon.children[0].setAttribute('href', `img/icons.svg#${iconString}`);
+        // icons.svg#icon-heart-outlined
+    };
 }

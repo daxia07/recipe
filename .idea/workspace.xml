@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="add pagination feature;&#10;prev page not working, try figure out why">
-      <change afterPath="$PROJECT_DIR$/src/js/views/LikeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/mockdata/search_list.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/mockdata/search_list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/views/RecipeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/RecipeView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/views/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/shoppingListView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/shoppingListView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +128,7 @@
       <workItem from="1568367476354" duration="4385000" />
       <workItem from="1568371961848" duration="9954000" />
       <workItem from="1568420613985" duration="3354000" />
-      <workItem from="1568502165305" duration="8058000" />
+      <workItem from="1568502165305" duration="18622000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -200,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568503064511</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished likeView">
+      <created>1568510857595</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1568510857595</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +237,8 @@
     <MESSAGE value="load data to pages" />
     <MESSAGE value="add pagination feature;&#10;prev page not working, try figure out why" />
     <MESSAGE value="fixed pagination bug;" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed pagination bug;" />
+    <MESSAGE value="finished likeView" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished likeView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,10 +259,19 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/views/LikeView.js</url>
-          <line>18</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="15" />
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>19</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>158</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/js/index.js</url>
+          <line>165</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

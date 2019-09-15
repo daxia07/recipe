@@ -3,6 +3,7 @@ import SearchView from "./views/SearchView";
 import RecipeView from "./views/RecipeView";
 import {elements, renderLoader, clearLoader} from "./views/base";
 import {updateLikesPanel} from "./views/LikeView";
+import updateShoppingList from "./views/shoppingListView";
 
 const searchUI = new SearchView(10);
 const recipeAPI = new RecipeAPI(process.env.API_URL, process.env.API_KEY, process.env.API_HOST);
@@ -10,6 +11,8 @@ let recipeView = {};
 
 const bufferData = {};
 let currentSearch = '';
+let shoppingList = [];
+let currentServe = 0;
 
 const setupListeners = (actionSearch, actionRecipe) => {
     elements.searchBtn.addEventListener('click', (evt => {
@@ -39,7 +42,6 @@ const setupListeners = (actionSearch, actionRecipe) => {
     });
     elements.likeIcon.addEventListener('click', evt => {
         evt.preventDefault();
-        console.log(evt.target);
         const closestEle = evt.target.closest('svg');
         const isLiked = closestEle.children[0].getAttribute('href').split('#')[1] === 'icon-heart';
         recipeView.toggleLikeBtn(isLiked);
@@ -61,6 +63,58 @@ const setupListeners = (actionSearch, actionRecipe) => {
         // update view
         updateLikesPanel(likedList);
     });
+    elements.btnTiny.forEach(btn => btn.addEventListener('click', evt => {
+        evt.preventDefault();
+        currentServe = parseInt(elements.serveNum.textContent);
+        const closestEle = evt.target.closest('button.btn-tiny');
+        if (closestEle.getElementsByTagName('use')[0].getAttribute('href').includes('minus')) {
+            // do minus
+            if (currentServe < 2) {
+                alert('Cannot do minus any more!');
+            } else {
+                console.log('minus clicked');
+                currentServe -= 1;
+                recipeView.renderIngredients(currentServe);
+                elements.serveNum.textContent = currentServe.toString();
+            }
+        } else {
+            // do add
+            console.log('add clicked');
+            currentServe += 1;
+            recipeView.renderIngredients(currentServe);
+            elements.serveNum.textContent = currentServe.toString();
+        }
+    }));
+    elements.recipeAddList.addEventListener('click', evt => {
+        // add to list
+        currentServe = parseInt(elements.serveNum.textContent);
+        evt.preventDefault();
+        // do more
+        for (let ingredient of recipeView.recipe.extendedIngredients) {
+            let ingredientPack = recipeView.pickedIngredients(ingredient);
+            console.log(ingredientPack);
+            ingredientPack.amount *= currentServe / recipeView.recipe.servings;
+            let existed = false;
+            for (let i of shoppingList) {
+                if (i.name === ingredientPack.name) {
+                    i.amount += ingredientPack.amount;
+                    existed = true;
+                    break;
+                }
+            }
+            if (!existed) {
+                shoppingList.push(ingredientPack);
+            }
+        }
+        updateShoppingList(shoppingList);
+    });
+    elements.shoppingList.addEventListener('click', evt => {
+        console.log('delete clicked!');
+        const closestEle = evt.target.closest('button.btn-tiny');
+        const name = closestEle.parentNode.querySelector('.shopping__description').textContent;
+        shoppingList = shoppingList.filter(item => item.name !== name);
+        updateShoppingList(shoppingList);
+    })
 };
 
 const doSearch = () => {
@@ -108,6 +162,7 @@ const init = () => {
     // searchUI.clear();
 };
 
+console.log('do it');
 init();
 // doTest();
 // doSearch();

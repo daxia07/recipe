@@ -211,9 +211,9 @@ const loadRandomRecipe = () => {
                 ele.image = ele.image.replace(elementStrings.baseUri, '');
                 formattedRecipes.push(picker(ele))
             });
-            bufferRecipes[tagName] = formattedRecipes;
+            bufferSearch[tagName] = formattedRecipes;
+            currentSearch = tagName;
             searchUI.loadRecipes(formattedRecipes);
-
         })
         .catch(error => console.log(error));
 };

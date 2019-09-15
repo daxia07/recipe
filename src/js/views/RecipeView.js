@@ -13,12 +13,16 @@ export default class RecipeView {
     renderIngredients(currentServe=1) {
         let htmlStr = '';
         this.recipe.extendedIngredients.forEach(ele => {
+            let amount = (ele.amount * currentServe / this.recipe.servings).toFixed(2);
+            if (amount.length > 3) {
+                amount = amount.replace('.00', '');
+            }
             htmlStr += `
                 <li class="recipe__item">
                     <svg class="recipe__icon">
                         <use href="img/icons.svg#icon-check"></use>
                     </svg>
-                    <div class="recipe__count">${(ele.amount * currentServe / this.recipe.servings).toFixed(2)}</div>
+                    <div class="recipe__count">${amount}</div>
                     <div class="recipe__ingredient">
                         <span class="recipe__unit">${ele.unit}</span>
                         ${ele.name}

@@ -4,6 +4,7 @@
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/RecipeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/RecipeView.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +128,7 @@
       <workItem from="1568420613985" duration="3354000" />
       <workItem from="1568502165305" duration="18622000" />
       <workItem from="1568528466051" duration="10238000" />
-      <workItem from="1568585837659" duration="3783000" />
+      <workItem from="1568585837659" duration="4680000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -241,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568552275632</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed bug caused by missing initial search buffer">
+      <created>1568591072381</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1568591072381</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +285,8 @@
     <MESSAGE value="fixed bug caused by mistakenly save localStorage" />
     <MESSAGE value="added random load first recipe" />
     <MESSAGE value="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format" />
-    <option name="LAST_COMMIT_MESSAGE" value="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format" />
+    <MESSAGE value="fixed bug caused by missing initial search buffer" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug caused by missing initial search buffer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -296,22 +305,6 @@
           <url>file://$PROJECT_DIR$/src/js/models/RecipeAPI.test.js</url>
           <line>6</line>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>229</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/index.js</url>
-          <line>201</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/js/views/SearchView.js</url>
-          <line>43</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="50" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

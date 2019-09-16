@@ -20,7 +20,7 @@ export default class RecipeView {
             htmlStr += `
                 <li class="recipe__item">
                     <svg class="recipe__icon">
-                        <use href="img/icons.svg#icon-check"></use>
+                        <use href="/static/img/icons.svg#icon-check"></use>
                     </svg>
                     <div class="recipe__count">${amount}</div>
                     <div class="recipe__ingredient">
@@ -51,12 +51,12 @@ export default class RecipeView {
                 iconString = 'icon-heart';
             }
         });
-        elements.likeIcon.children[0].setAttribute('href', `img/icons.svg#${iconString}`);
+        elements.likeIcon.children[0].setAttribute('href', `/static/img/icons.svg#${iconString}`);
     }
 
     toggleLikeBtn(isLiked) {
         const iconString = isLiked ? 'icon-heart-outlined':'icon-heart';
-        elements.likeIcon.children[0].setAttribute('href', `img/icons.svg#${iconString}`);
+        elements.likeIcon.children[0].setAttribute('href', `/static/img/icons.svg#${iconString}`);
         // icons.svg#icon-heart-outlined
     }
 }

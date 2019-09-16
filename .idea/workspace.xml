@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="604a627d-f3f5-48ab-9307-35663f671e71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/views/RecipeView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/RecipeView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/views/base.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/views/base.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,7 +129,7 @@
       <workItem from="1568420613985" duration="3354000" />
       <workItem from="1568502165305" duration="18622000" />
       <workItem from="1568528466051" duration="10238000" />
-      <workItem from="1568585837659" duration="4680000" />
+      <workItem from="1568585837659" duration="6691000" />
     </task>
     <task id="LOCAL-00001" summary="added static files; added css file;&#10;TODO: Webpack CopyPlugin not working; will figure out later;&#10;TODO: use gulp to arrange tasks">
       <created>1568288036722</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568591072381</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="changed amount and">
+      <created>1568591978170</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1568591978170</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +294,8 @@
     <MESSAGE value="added random load first recipe" />
     <MESSAGE value="last commit after polling out 31 recipes;&#10;TODO: change recipe list to search list format" />
     <MESSAGE value="fixed bug caused by missing initial search buffer" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug caused by missing initial search buffer" />
+    <MESSAGE value="changed amount and" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed amount and" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
